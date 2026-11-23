@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStudy - Student Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SmartStudy 📚</h1>
+        <p>Your Personal Student Productivity Planner</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#tasks">My Tasks</a>
+        <a href="#timetable">Timetable</a>
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </nav>
+
+    <main>
+        <section id="dashboard">
+            <h2>Welcome to SmartStudy!</h2>
+            <p>Plan your studies. Track your progress. Achieve your goals.</p>
+            <div class="stats">
+                <div class="card">
+                    <h3 id="totalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+                <div class="card">
+                    <h3 id="completedTasks">0</h3>
+                    <p>Completed Tasks</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>My Study Tasks</h2>
+            <div class="task-input">
+                <input type="text" id="taskInput"
+                    placeholder="Enter your study task">
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+        
+<!-- STUDY TIMER -->
+<section id="timer">
+    <h2>⏱️ Pomodoro Study Timer</h2>
+
+    <p>Focus on your studies and achieve your goals!</p>
+
+    <div class="timer-box">
+        <h3 id="timerDisplay">25:00</h3>
+
+        <div class="timer-buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+</section>
+
+        
+<!-- WEEKLY STUDY TIMETABLE -->
+<section id="timetable">
+
+    <h2>📅 My Weekly Study Timetable</h2>
+
+    <p>Organize your subjects and manage your study time.</p>
+
+    <div class="table-container">
+
+        <table class="study-table">
+
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Python</td>
+                    <td>Mathematics</td>
+                    <td>DSA</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Java</td>
+                    <td>DBMS</td>
+                    <td>Python Practice</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>DSA</td>
+                    <td>Mathematics</td>
+                    <td>Java Practice</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>Python</td>
+                    <td>DBMS</td>
+                    <td>DSA Practice</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>Java</td>
+                    <td>Mathematics</td>
+                    <td>Revision</td>
+                </tr>
+
+                <tr>
+                    <td>Saturday</td>
+                    <td>DSA</td>
+                    <td>Python</td>
+                    <td>Weekly Revision</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+<!-- SUBJECT PROGRESS TRACKER -->
+<section id="progress">
+
+    <h2>📊 Subject-wise Progress Tracker</h2>
+    <p>Track your learning progress for every subject.</p>
+
+    <div class="progress-input">
+        <input type="text" id="subjectInput"
+            placeholder="Enter subject name">
+
+        <input type="number" id="percentageInput"
+            placeholder="Progress %" min="0" max="100">
+
+        <button id="addSubjectBtn">Add Subject</button>
+    </div>
+
+    <div id="subjectList"></div>
+
+</section>
+
+<!-- SUBJECT PROGRESS TRACKER -->
+<section id="progress">
+    <!-- Your existing subject progress code -->
+</section>
+
+
+<!-- PASTE DAILY STUDY GOALS HERE -->
+<section id="dailyGoals">
+
+    <h2>🎯 My Daily Study Goals</h2>
+
+    <p>Set your goals and complete them one by one!</p>
+
+    <div class="goal-input">
+        <input type="text" id="goalInput"
+            placeholder="Enter your daily study goal">
+
+        <button id="addGoalBtn">Add Goal</button>
+    </div>
+
+    <div class="goal-progress">
+        <h3>Today's Progress</h3>
+
+        <div class="goal-progress-bar">
+            <div id="goalProgressFill"></div>
+        </div>
+
+        <p id="goalPercentage">0% Completed</p>
+    </div>
+
+    <ul id="goalList"></ul>
+
+    <h3 id="motivationMessage">
+        Start your day with a goal! 🌟
+    </h3>
+
+</section>
+<!-- EXAM COUNTDOWN -->
+<section id="examCountdown">
+
+    <h2>📅 Exam Countdown</h2>
+
+    <p>Never miss an exam! Track your upcoming examinations.</p>
+
+    <div class="exam-input">
+
+        <input
+            type="text"
+            id="examSubject"
+            placeholder="Enter subject name"
+        >
+
+        <input
+            type="date"
+            id="examDate"
+        >
+
+        <button id="addExamBtn">Add Exam</button>
+
+    </div>
+
+    <div class="exam-summary">
+        <h3>My Upcoming Exams</h3>
+        <p id="examCount">0 Upcoming Exams</p>
+    </div>
+
+    <div id="examList"></div>
+
+    <h3 id="examMessage">
+        Stay focused and prepare well! 📚
+    </h3>
+
+</section>
+
+
+<!-- DO NOT PASTE BELOW THIS LINE -->
+</main>
+
+<footer>
+    <p>© 2026 SmartStudy | Study Smart, Achieve More 🚀</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+    </div>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 SmartStudy | Study Smart, Achieve More 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
